@@ -1,0 +1,9 @@
+# Input and output file paths
+input_file = r"D:\"
+output_file = r"D:\"
+#ss = starting second, t = time to preserve in this example i start from 3 and take 13 seconds after three for analysis
+try:
+    ffmpeg.input(input_file, ss=3, t=13).output(output_file).run()
+    print(f"Trimmed video saved to {output_file}")
+except ffmpeg.Error as e:
+    print(f"An error occurred: {e}")
